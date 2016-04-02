@@ -3,7 +3,7 @@
 [ ![Release] [release-image] ] [releases]
 [ ![License] [license-image] ] [license]
 
-[release-image]: http://img.shields.io/badge/release-0.9.0-blue.svg?style=flat
+[release-image]: http://img.shields.io/badge/release-0.9.1-blue.svg?style=flat
 [releases]: https://github.com/IntelRealSense/librealsense
 
 [license-image]: http://img.shields.io/badge/license-Apache--2-blue.svg?style=flat
@@ -64,6 +64,12 @@ Neither libuvc nor V4L2 backends have been validated on Ubuntu 12.04 LTS or Ubun
 ### Firmware Update
 
 All RealSense™ cameras ship with proprietary firmware. This firmware is periodically updated with critical bugfixes, however librealsense does not currently provide functionality to upload new firmware. A supported update path is available on Windows 8.1 and Windows 10 systems via the [Intel® RealSense™ DCM](https://downloadcenter.intel.com/download/25044/Intel-RealSense-Depth-Camera-Manager-DCM-) (Depth Camera Manager). Installing the DCM on a supported machine with an attached camera will automatically flash the latest firmware released by Intel.
+
+| Camera | F/W |
+| ------ | --- |
+| R200 | 1.0.72.04 |
+| F200 | 2.60.0.0 |
+| SR300 |3.10.10.0 |
 
 # Installation Guide
 
