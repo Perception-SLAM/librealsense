@@ -67,7 +67,7 @@ bin/c-%: examples/c-%.c library
 	$(CC) $< $(REALSENSE_FLAGS) $(GLFW3_FLAGS) -o $@
 
 bin/cpp-%: examples/cpp-%.cpp library
-	$(CXX) $< -std=c++11 $(REALSENSE_FLAGS) $(GLFW3_FLAGS) -o $@
+	$(CXX) $< -std=c++11 $(REALSENSE_FLAGS) $(GLFW3_FLAGS) -lc -o $@
 
 # Rules for building the library itself
 lib/librealsense.so: prepare $(OBJECTS)

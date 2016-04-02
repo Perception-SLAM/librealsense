@@ -60,6 +60,24 @@ int main() try
 
                 // Show horizontal and vertical field of view, in degrees
                 std::cout << "\t" << std::setprecision(3) << intrin.hfov() << " x " << intrin.vfov() << " degrees\n";
+                std::cout << "\t" << std::setprecision(8) << intrin.fx << " " << intrin.fy << " " << intrin.ppx << " " << intrin.ppy << std::endl;
+                
+                rs::extrinsics depth_to_color;
+                depth_to_color = dev->get_extrinsics(rs::stream::depth, rs::stream::color);
+                std::cout << "\t" << std::setprecision(8) << depth_to_color.rotation[0] << " " 
+                << depth_to_color.rotation[1] << " " 
+                << depth_to_color.rotation[2] << " " 
+                << depth_to_color.rotation[3] << " " 
+                << depth_to_color.rotation[4] << " " 
+                << depth_to_color.rotation[5] << " " 
+                << depth_to_color.rotation[6] << " " 
+                << depth_to_color.rotation[7] << " " 
+                << depth_to_color.rotation[8] << " " 
+                << depth_to_color.translation[0] << " " 
+                << depth_to_color.translation[1] << " " 
+                << depth_to_color.translation[2] << " " 
+                << std::endl;
+                
             }
 
             // Some stream mode combinations are invalid, so disable this stream before moving on to the next one
